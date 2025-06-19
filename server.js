@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json()); // req.body got
 app.use(cors());
 
-app.use("/todo", todoRouter);
+app.use("/todo", authenticate, todoRouter);
 
 const PORT = process.env.PORT || 8889;
 

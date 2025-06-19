@@ -1,7 +1,7 @@
 const todoController = {
   getAllTodo: async (req, res, next) => {
     try {
-      const {} = req.body;
+      // const {} = req.body;
 
       res.statuss(200).json({ message: "getAllTodo" });
     } catch (error) {
@@ -11,10 +11,11 @@ const todoController = {
 
   getAllTodoById: async (req, res, next) => {
     try {
-      const {} = req.body;
-      const {} = req.params;
+      // const {} = req.body;
+      const {id} = req.params;
+      
 
-      res.statuss(200).json({ message: "getAllTodo" });
+      res.statuss(200).json({ message: "getAllTodoById" });
     } catch (error) {
       next(error);
     }
